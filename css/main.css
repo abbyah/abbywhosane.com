@@ -1,0 +1,281 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Table of Contents
+-----------------------------------
+- General Content
+- Typography
+- Header & Navigation
+- Images & Media
+- Footer
+- Media Queries
+-----------------------------------*/
+
+/* General Content
+------------------------------------*/
+.main{padding-top: 3%;}
+.row{padding: 2% 0;}
+.gold{background-color: #CFB53B;}
+.white{background-color: #ffffff;}
+.black{background-color: #ffffff;}
+.maroon{background-color: #800000}
+
+/* Typography
+------------------------------------*/
+body{
+	font-family: 'Abel', sans-serif;
+	font-size: 1.5em;
+	font-color: #000000;
+}
+h2{
+	font-family: 'Coming-Soon', cursive;
+	font-size: 3em;
+	margin: 0.67em;
+}
+h2.bio{color: #000000;}
+p.bio{color: #ffffff;}`
+
+
+h1 .announcement{
+	font-size: 48px;
+	font-family: 'Abel', sans-serif;
+	font-weight: bold;
+	color: #ffffff;
+}
+p.handwriting{
+	font-family: 'Droid-Serif', cursive;
+	font-size: 1em;
+	color: #ffffff;
+}
+
+/* Header & Navigation
+------------------------------------*/
+header .main_nav {
+	
+	margin: 0 20px 0 0;
+	padding: 5px 0 0 0;
+	width: 20%;
+	display: block;
+	}
+
+
+nav {
+	font-family: "Abel";
+	text-align: left;
+	padding: 5px 0;
+	margin: 10px 0 0;
+	}
+
+nav a {
+	font-weight:800;
+	padding: 10px 5px;
+}
+
+nav ul {
+	list-style:none;
+	margin:0 10px;
+	padding:0;
+	}
+	
+nav li {
+	display:inline-block;
+	font-family: serif;
+
+	}
+
+nav a.selected a:hover{
+	color:#000000;
+	}
+
+.logo{
+	margin: 0% auto;
+	text-align: center;
+	font-family: serif;
+}
+
+.logo a{
+	font-size: 3em;
+	color: #ffffff;
+	text-decoration: none;
+	border: 3px solid #ffffff;
+	text-transform: uppercase;
+	padding: 2px 10px 0 10px;
+	margin: 0;
+}
+
+.logo a:hoover{
+	background-color: #ffffff;
+	color: #CFB53B;
+}
+
+/* Images & Media
+------------------------------------*/
+img{
+	max-width: 100%;
+	max-height: auto;
+}
+img.avatar{
+	border-radius: 60%;
+	border: 5px solid #ffffff;
+    background-image: url('../img/americanDesertEagle.jpg');
+    width: 150px;
+    height: 150px;
+    background-position: left;
+    background-size: 200px;
+  
+}
+img:hover{
+	opacity: 0.8;
+}
+
+/* Footer
+------------------------------------*/
+footer {
+	font-family:Garamond;
+	color:#433233;
+    position: center;
+    text-align: center;
+	margin:5px 0 0;
+}
+
+
+footer p{
+	margin:0;
+	}
+
+ol.enumerate{
+	display: block;
+
+}
+
+ul.social{
+	display: block;
+	margin: 5% 0;
+	list-style-type: none;
+	text-align: center; 
+}
+
+ul.social li{
+	font-size: 1.5em;
+	display: inline;
+	padding: 0 1.5%;
+}
+
+ul.social li a{
+	color: #CFB53B;
+}
+
+ul.social li.facebook a:hover{
+	color: rgb(59,89,152);
+}
+
+ul.social li.instagram a:hover{
+	color: rgb(81,127,237);
+}
+
+ul.social li.twitter a:hover{
+	color: rgb(0,172,237);
+}
+
+ul.social li.bitcoin a:hover{
+	color: rgb(0, 102, 0);
+}
+
+
+/*
+ul.social li.github a:hover{
+	color: rgb(255,153,0);
+}*/
+
+
+
+ul.social li.linkedin a:hover{
+	color: rgb(59,89,152);
+}
+p.copyright{
+	text-align: center;
+	color: #CFB53B;
+	font-size: .8em;
+	font-family: 'Coming-Soon', cursive;
+
+}
+/* Media Queries
+------------------------------------*/
+@media (max-width: 479px) {
+/* CSS Document */
+
+@media screen and (min-width: 480px) {
+/* CSS Document */
+
+body {
+	background: maroon;
+	}
+
+}
+@media screen and (min-width: 660px) {
+
+body {
+	background: maroon;
+	}
+}
+
+@media screen and (min-width: 660px) {
+
+
+}
+/*----------------------------------*/
+
+.logo a{font-size: 2em;}
+.main{padding-top: 15%;}
+ img.avatar{margin-top: 15%;}
+ h2.bio{font-size: 2.5em;}
+ p.bio{font-size: 1.75em;}
+ ul.social li a{font-size: .75em;}
+}
+
+
+/*site body*/
+body{
+    background: #800000;
+	text-decoration:none;
+}
+
+
+.container h1.announcement{
+	font-size: 48px;
+	font-family: 'Abel', sans-serif;
+	font-weight: bold;
+	color: #ffffff;
+}
+.container {
+	position: fixed;
+	font-family: 'Abel', sans-serif;
+	font-size: 20px;
+	color: #000000;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #FFFFFF;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000000;
+}
+
+/* selected link */
+a:active {
+    color: #000000;
+}
+

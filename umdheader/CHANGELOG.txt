@@ -1,0 +1,19 @@
+umdheader 7-x-1.2 (10-12-2014)
+==============================
+
+* Improved JS load order.
+* Prevented multiple umdHeader initialization.
+* Code cleanup.
+
+
+umdheader 7-x-1.1 (30-09-2014)
+==============================
+
+* The UMD Header's positioning has changed from fixed to absolute.
+	Reimplemented Javascript for "Toolbar" and "Admin Menu".
+
+
+umdheader 7-x-1.0 (14-05-2014)
+==============================
+
+* Initial implementation.

@@ -1,0 +1,10 @@
+name = UMD Header
+description = Implements the UMD Header.
+package = User interface
+core = 7.x
+configure = admin/config/user-interface/umdheader
+
+version = "7.x-1.2"
+project = "umdheader"
+project status url = "http://s3.amazonaws.com/umdheader.umd.edu/drupal/release-history"
+datestamp = "1418242159"

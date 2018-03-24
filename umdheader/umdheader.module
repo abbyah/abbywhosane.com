@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function umdheader_menu() {
+  $items['admin/config/user-interface/umdheader'] = array(
+    'title' => 'UMD Header',
+    'description' => 'Configure settings related to the UMD Header.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('umdheader_settings_form'),
+    'access arguments' => array('administer site configuration'),
+  );
+
+  return $items;
+}
+
+/**
+ * Admin settings menu callback.
+ */
+function umdheader_settings_form() {
+  $form['umdheader_js_init_news'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Display news in the UMD header'),
+    '#default_value' => variable_get('umdheader_js_init_news', TRUE),
+  );
+
+  return system_settings_form($form);
+}
+
+
+/**
+ * Implements hook_page_build().
+ */
+function umdheader_page_build(&$page) {
+  $module_path = drupal_get_path('module', 'umdheader');
+
+  // Exclude admin pages
+  if (path_is_admin(current_path())) {
+    return;
+  }
+
+  // Load the UMD Header JS file.
+  $opts = array(
+    'type' => 'external',
+    'scope' => 'footer',
+    'group' => JS_LIBRARY,
+    'every_page' => TRUE,
+    'cache' => FALSE,
+  );
+  drupal_add_js('//s3.amazonaws.com/umdheader.umd.edu/app/js/main.js', $opts);
+
+  // Pass variable for News.
+  $data = array(
+    'umdHeader' => array(
+      'news' => variable_get('umdheader_js_init_news', TRUE)
+    )
+  );
+  drupal_add_js($data, 'setting');
+
+  // Initialize the Header
+  $opts = array(
+    'type' => 'file',
+    'scope' => 'footer',
+    'group' => JS_THEME,
+    'every_page' => TRUE,
+  );
+  drupal_add_js($module_path . '/umdheader.js', $opts);
+}
